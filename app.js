@@ -9,3 +9,15 @@ class HelloWorld extends React.Component {
     }
 }
 
+
+
+var containers = document.querySelectorAll(".cfe-app")
+
+containers.forEach(domContainer => {
+    const userid = domContainer.dataset.userid
+
+    ReactDom.render(
+        e(HelloWorld, {userid: userid}),
+        domContainer
+        )
+})
